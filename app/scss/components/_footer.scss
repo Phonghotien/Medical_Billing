@@ -1,0 +1,243 @@
+.ft {
+  --py: 4.8rem;
+  overflow: hidden;
+  position: relative;
+  @include max(768px) {
+    --py: 2.4rem;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    @include full;
+    background: linear-gradient(177.23deg, #002868 1.65%, #0054c5 120.36%);
+  }
+  &-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 100vh;
+      top: 50%;
+      left: calc(100% / 3);
+      transform: translate(-50%, -50%);
+      background: rgba(255, 255, 255, 0.4);
+      @include max(1024px) {
+        display: none;
+      }
+    }
+  }
+  &-top {
+    padding: var(--py) 0;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    @include max(1024px) {
+      order: 2;
+    }
+    .b-row {
+      @include min(769px) {
+        align-items: center;
+      }
+      > .col {
+        @include max(768px) {
+          width: 100%;
+        }
+      }
+    }
+    .iwt {
+      --iz: 6.4rem;
+      --cl: #fff;
+      --fw: 500;
+      --fz: 1.8rem;
+      --gap: 2.4rem;
+      @include max(1024px) {
+        --iz: 4.2rem;
+        --gap: 1.2rem;
+        --fz: 1.6rem;
+      }
+      .icon {
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 100rem;
+        border: 0.1rem solid rgba(255, 255, 255, 0.4);
+
+        img {
+          width: 2.4rem;
+          @include max(1024px) {
+            width: 1.8rem;
+          }
+        }
+      }
+      @include max(768px) {
+        justify-content: flex-start !important;
+      }
+    }
+    .col {
+      &:last-child {
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 100vh;
+          top: 50%;
+          left: 0;
+          transform: translate(-50%, -50%);
+          background: rgba(255, 255, 255, 0.4);
+          @include max(1024px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &-bot {
+    padding: var(--py) 0;
+    .col {
+      @include max(1024px) {
+        width: 100%;
+      }
+    }
+  }
+  &-logo {
+    .custom-logo-link {
+      max-width: 44rem;
+      @include mid-flex;
+      @include max(1024px) {
+        margin: 0 auto;
+      }
+    }
+  }
+  &-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10rem;
+
+    @include max(1200px) {
+      gap: 2.4rem;
+    }
+    @include max(768px) {
+      flex-direction: column;
+      justify-content: unset;
+    }
+  }
+  &-box {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    max-width: 40rem;
+    @include max(1024px) {
+      flex: 1;
+      max-width: unset;
+    }
+    .t-text {
+      font-weight: 500;
+      color: var(--color-white);
+      @include fz-18;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 1.6rem;
+      margin: 0 -0.8rem;
+      li {
+        width: 50%;
+        padding: 0 0.8rem;
+        a {
+          display: flex;
+          gap: 0.8rem;
+          color: var(--color-white);
+          align-items: center;
+          transition: 0.3s ease-in-out;
+          &::before {
+            content: "\f054";
+            width: 1.6rem;
+            height: 1.6rem;
+            @include mid-flex;
+            font-family: "Font Awesome 6 Pro";
+          }
+        }
+      }
+    }
+  }
+  &-form {
+    padding: 1.6rem;
+    background: var(--color-white);
+    border-radius: 0.8rem;
+    input {
+      width: 100%;
+      background: unset;
+      outline: unset;
+      border: unset;
+      font-size: 1.6rem;
+      color: var(--color-text);
+      &::placeholder {
+        color: #808080;
+      }
+    }
+    .btn-text {
+      color: var(--color-pri);
+      font-weight: 500;
+      @include fz-16;
+      flex-shrink: 0;
+      transition: 0.3s ease-in-out;
+      @include hover {
+        color: var(--color-sec);
+      }
+    }
+  }
+  .social-link {
+    background: var(--color-pri);
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  &-end {
+    padding: 2.4rem 0;
+    position: relative;
+    z-index: 2;
+    &:before {
+      content: "";
+      position: absolute;
+      background: var(--color-sec);
+      left: 50%;
+      top: 0;
+      height: 100%;
+      width: 100vw;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    .d-flex {
+      gap: 0;
+      @include max(1024px) {
+        flex-direction: column;
+        gap: 1.2rem;
+        text-align: center;
+        align-items: center;
+      }
+    }
+    .text {
+      color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          display: inline-block;
+          width: 0.1rem;
+          height: 2rem;
+          background: rgba(255, 255, 255, 0.15);
+          flex-shrink: 0;
+          margin: 0 1.6rem;
+          @include max(1024px) {
+            display: none;
+          }
+        }
+      }
+      @include max(1024px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

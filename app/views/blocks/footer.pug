@@ -1,0 +1,65 @@
+footer.ft 
+   .container 
+      .ft-wrap 
+         .ft-top 
+            .b-row.row 
+               .col.col-4
+                  .ft-ct.iwt.j-center 
+                     span.icon 
+                        +img("ic-ad (1).svg")
+                     .t-gr 
+                        span.txt.fw-4 Address: 
+                        a(href="").text 3687 Briarcliff Rd NE Atlanta, GA 30345  
+               .col.col-4 
+                  .ft-ct.iwt.j-center 
+                     span.icon 
+                        +img("ic-ad (2).svg")
+                     .t-gr 
+                        span.txt.fw-4 Phone:
+                        a(href="").text +1470-399-0965 
+               .col.col-4
+                  .ft-ct.iwt.j-center 
+                     span.icon 
+                        +img("ic-ad (3).svg")
+                     .t-gr 
+                        span.txt.fw-4 Email:
+                        a(href="").text info@usamedicalcoding-school.com
+         .ft-bot 
+            .b-row.row 
+               .col.col-4
+                  .ft-logo 
+                     a(href="").custom-logo-link
+                        +img("ft-logo.png") 
+               .col.col-8
+                  .ft-group
+                     .ft-box 
+                        span.t-text Links
+                        ul.menu 
+                           li
+                              a(href="") About Us 
+                           li 
+                              a(href="") Payment
+                           li 
+                              a(href="") Programs 
+                           li 
+                              a(href="") Job Opportunities
+                           li 
+                              a(href="") Enrollment
+                           li 
+                              a(href="") Blog      
+                     .ft-box 
+                        span.t-text Subscribe for Newsletter 
+                        .ft-form 
+                           form(action="")
+                              .d-flex.not-wrap
+                                 input(type="text" placeholder="Email Address")
+                                 button(type="submit").btn-text
+                                    span.text Subcribe Now
+                        .social-list
+                           each i,index in Array(3)
+                              a(href="").social-link
+                                 +img(`ft-sc (${index+1}).svg`)
+      .ft-end 
+         .d-flex.j-center.a-center
+            span.text Copyright @2025 USA Medical Billing & Coding School
+            span.text Designed by Qixtech - Web Design & Digital Marketing

@@ -1,0 +1,69 @@
+.btn {
+  --iz: 5.6rem;
+  @include mid-flex;
+  width: fit-content;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 2.4rem;
+  @include transition(0.3s, ease-in-out);
+  overflow: hidden;
+  position: relative;
+  background: var(--color-sec);
+  gap: 1.6rem;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  min-height: var(--iz);
+  border-radius: 100rem;
+  &.trans {
+    background: transparent;
+    border: 0.1rem solid var(--color-pri);
+    color: var(--color-pri);
+  }
+  &.white {
+    background: var(--color-white);
+    color: #151515;
+  }
+  @include max(1200px) {
+    --iz: 4.2rem;
+    font-size: 1.4rem;
+    padding-left: 1.6rem;
+    gap: 0.8rem;
+  }
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+  .icon {
+    width: var(--iz);
+    height: var(--iz);
+    @include mid-flex;
+    flex-shrink: 0;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    background: var(--color-pri);
+    border-radius: inherit;
+    color: var(--color-white);
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: var(--color-pri);
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  @include hover {
+    color: var(--color-white);
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &.center {
+    margin: 0 auto;
+  }
+}

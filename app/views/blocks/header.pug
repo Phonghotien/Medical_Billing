@@ -1,0 +1,127 @@
+header.hd 
+   .container 
+      .hd-wrap 
+         .hd-top
+            .d-flex.j-bw.a-center.h-full
+               .d-flex
+                  a(href="").hd-box.iwt
+                     span.icon 
+                        +img("ic-phone.svg")
+                     span.txt (470) 399-0965
+                  a(href="").hd-box.iwt
+                     span.icon 
+                        +img("ic-mail.svg")
+                     span.txt info@usamedicalcodingschool.com
+               .d-flex
+                  a(href="").iwt.hd-box
+                     span.icon 
+                        +img("ic-cart.svg")
+                  a(href="").iwt.hd-box
+                     span.text Learning Login
+                  .social-list
+                     each i,index in Array(3)
+                        a(href="").social-link
+                           +img(`ic-sc (${index+1}).svg`)
+         .hd-bot.d-flex.j-bw.a-center
+            .hd-logo 
+               a(href="").custom-logo-link
+                  +img("logo.png")
+            .hd-nav 
+               .menu-nav 
+                  ul.menu-list
+                     li.menu-item.current-menu-item
+                        a(href="").menu-link
+                           |  About Us
+                     li.menu-item.dropdown
+                        a(href="").menu-link
+                           |  Programs
+                        ul.menu-list 
+                           li.menu-item
+                              a(href="").menu-link
+                                 |Demo
+                           li.menu-item 
+                              a(href="").menu-link
+                                 |Demo
+                           li.menu-item 
+                              a(href="").menu-link
+                                 |Demo
+                     li.menu-item
+                        a(href="").menu-link
+                           |  Enrollment
+                     li.menu-item
+                        a(href="").menu-link
+                           |  Payment
+                     li.menu-item
+                        a(href="").menu-link
+                           |  Jop Opportunities
+                     li.menu-item
+                        a(href="").menu-link
+                           |  Blog
+                     li.menu-item
+                        a(href="").menu-link
+                           |  Contact Us
+            .hd-burger#hamburger 
+                  .burger 
+                     .hamburger  
+                        .line 
+                        .line   
+   .mobile-overlay
+   .mobile
+      .mobile-con
+         .mobile-wr
+            .mobile-nav
+               .menu-nav
+                  ul.menu-list
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Home
+                     li.menu-item
+                        a.menu-link(href='')
+                           | About Us
+                     li.menu-item.dropdown
+                        a.menu-link(href='')
+                           |  Programs 
+                        ul.menu-list
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | DemoSp
+                           li.menu-item
+                              a.menu-link(href='')
+                                 | DemoSp
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Enrollment
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Payment
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Jop Opportunities
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Blog
+                     li.menu-item
+                        a.menu-link(href='')
+                           | Contact Us
+               .mobile-content
+                  p.t-txt.c-pri.fw-6.mb-8
+                     | Contact with us
+                  .d-flex.d-col
+                     .d-flex.d-col
+                        a(href="").hd-box.iwt
+                           span.icon 
+                              +img("ic-phone.svg")
+                           span.txt (470) 399-0965
+                        a(href="").hd-box.iwt
+                           span.icon 
+                              +img("ic-mail.svg")
+                           span.txt info@usamedicalcodingschool.com
+                     .d-flex
+                        a(href="").iwt.hd-box
+                           +img("ic-cart.svg")
+                        a(href="").iwt.hd-box
+                           span.text Learning Login
+                        .social-list
+                           each i,index in Array(3)
+                              a(href="").social-link
+                                 +img(`ic-sc (${index+1}).svg`)
