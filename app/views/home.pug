@@ -1,0 +1,174 @@
+extends layout/layout
+
+block vars
+   -title = 'Home'
+   -bodyClass = 'page-template'
+
+block container
+   section.sec-bner
+      .bner 
+         .bner-row 
+            .bner-col
+               .bner-bg 
+                  +img("bner-bg.jpg")
+                  .bner-dc.x1
+                     +img("bner-dc-1.svg")
+                  .bner-dc.x2
+                     +img("bner-dc-2.svg")
+               .bner-content 
+                  .bner-content-inner
+                     div.bner-tag Educate, connect, and empower
+                     h1.bner-title Become a Certified U.S Medical Biller & Coder
+                     p.bner-des 
+                        | Empower your future with flexible online courses, expert
+                        br
+                        | guidance, and student loan options
+                     .bner-control
+                        +Btn("Send Us")
+                        +img("bner-logo.png")
+            .bner-col 
+               .bner-img 
+                  +img("bner-bg.jpg")
+   .int 
+      .int-container 
+         .int-list 
+            .int-item 
+               +img("int-ic-1.svg")
+               span.txt-1 Duration:
+               span.txt 5 months
+            .int-item 
+               +img("int-ic-2.svg")
+               span.txt-1 Start Date:
+               span.txt 22d : 14hrs : 13m
+            .int-item 
+               +img("int-ic-3.svg")
+               span.txt-1 Location:
+               span.txt Blended Learning
+   section.sec-program
+      .program.ss-pd
+         .container
+            .program-head 
+               .left 
+                  .re-tag KEY BENEFITS
+                  h2.t-title Program Highlight.
+               .right 
+                  p.des 
+                     | Gain in-demand medical billing and coding skills through a structured program designed for success. With dual certification, real-world practice, and career placement support, USA Medical Billing and Coding School prepares you for a stable and rewarding future in the U.S. healthcare industry.
+            .program-slider 
+               .swiper-container 
+                  .swiper
+                     .swiper-wrapper
+                        each _, index in Array.from({ length: 3 })
+                           .swiper-slide 
+                              .program-box 
+                                 +img("program-img.jpg")
+                                 .program-content 
+                                    p.program-name Master Medical Terminology
+                                    p.program-des Learn medical terminology: prefixes, suffixes, roots, combining forms. Interpret medical reports accuratelya
+               +SwiperControl()
+   section.sec-uti 
+      .uti 
+         .container 
+            .t-center.mb-24 
+               p.uti-sub  WHAT YOU WILL GET
+            .row.uti-list
+               .col.col-4 
+                  .uti-wrap
+                     +img("uti-ic-1.svg")
+                     .uti-content 
+                        p.uti-name Dual US. Certifications (CPC & CPB, AAPC-accredited)
+               .col.col-4 
+                  .uti-wrap
+                     +img("uti-ic-2.svg")
+                     .uti-content 
+                        p.uti-name Guaranteed job interview upon post-certification with us
+               .col.col-4
+                  .uti-wrap
+                     +img("uti-ic-3.svg")
+                     .uti-content 
+                        p.uti-name Study from anywhere, anytime with a self-paced curriculum
+   section.sec-qa 
+      .qa.ss-pd 
+         .container
+            .t-center.qa-head
+               .re-tag.mb-24 KEY BENEFITS
+               h2.t-title.mb-16 What makes our program the best choice for you?
+               p.des
+                  | Our program is designed for your success with a structured curriculum, experienced instructors, and dedicated career support.
+            .qa-wrapper
+               .qa-list.collapse-block 
+                  .qa-item.collapse-item
+                     +img("qa-dc.png")
+                     .qa-heading.collapse-head
+                        p.title High Paying - Salaries
+                        span.icon
+                     .qa-body.collapse-body
+                        .qa-flex
+                           .qa-left 
+                              p Medical Billing & Coding can potentially lead to high-paying salaries, depending on various factors such as experience, certifications, and the complexity of the coding work. Medical coders play a crucial role in the healthcare industry by translating medical services, procedures, and diagnoses into alphanumeric codes. These codes are used for billing purposes, insurance claims, and maintaining accurate patient records.
+                           .qa-img 
+                              +img("qa-img.jpg")
+                  .qa-item.collapse-item
+                     +img("qa-dc.png")
+                     .qa-heading.collapse-head
+                        p.title  Flexible Remote Working
+                        span.icon
+                     .qa-body.collapse-body
+                        .qa-flex
+                           .qa-left 
+                              p Medical Billing & Coding can potentially lead to high-paying salaries, depending on various factors such as experience, certifications, and the complexity of the coding work. Medical coders play a crucial role in the healthcare industry by translating medical services, procedures, and diagnoses into alphanumeric codes. These codes are used for billing purposes, insurance claims, and maintaining accurate patient records.
+                           .qa-img 
+                              +img("qa-img.jpg")
+                  .qa-item.collapse-item
+                     +img("qa-dc.png")
+                     .qa-heading.collapse-head
+                        p.title Easy Studying Schedule
+                        span.icon
+                     .qa-body.collapse-body
+                        .qa-flex
+                           .qa-left 
+                              p Medical Billing & Coding can potentially lead to high-paying salaries, depending on various factors such as experience, certifications, and the complexity of the coding work. Medical coders play a crucial role in the healthcare industry by translating medical services, procedures, and diagnoses into alphanumeric codes. These codes are used for billing purposes, insurance claims, and maintaining accurate patient records.
+                           .qa-img 
+                              +img("qa-img.jpg")
+                  .qa-item.collapse-item
+                     +img("qa-dc.png")
+                     .qa-heading.collapse-head
+                        p.title Long-term job stability
+                        span.icon
+                     .qa-body.collapse-body
+                        .qa-flex
+                           .qa-left 
+                              p Medical Billing & Coding can potentially lead to high-paying salaries, depending on various factors such as experience, certifications, and the complexity of the coding work. Medical coders play a crucial role in the healthcare industry by translating medical services, procedures, and diagnoses into alphanumeric codes. These codes are used for billing purposes, insurance claims, and maintaining accurate patient records.
+                           .qa-img 
+                              +img("qa-img.jpg")
+   section.sec-lead 
+      .lead.ss-pd 
+         .lead-dc.x1 
+            +img("lead-dc-1.png")
+         .lead-dc.x2
+            +img("lead-dc-2.png")
+         .container
+            .row 
+               .col.col-6.lead-col 
+                  .lead-img 
+                     +img("lead-img.jpg")
+               .col.col-6.lead-col
+                  .lead-content
+                     div 
+                        span.lead-tag.re-tag THE LEADERSHIP
+                        h2.lead-title Michael Andrews
+                        p.lead-des.t-title Introducing our talented Program Director that lead your way.
+                     .lead-flex 
+                        .lead-item
+                           .lead-ic 
+                              +img("lead-ic-1.svg")
+                           .lead-name 30+ Years Medical Coding and Billing Expertise
+                        .lead-item
+                           .lead-ic 
+                              +img("lead-ic-2.svg")
+                           .lead-name Dual Master's Degree in Business & Healthcare
+                        .lead-item
+                           .lead-ic 
+                              +img("lead-ic-3.svg")
+                           .lead-name Certified Professional with AAPC & MGMA
+

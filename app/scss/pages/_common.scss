@@ -1,0 +1,15 @@
+.re-tag {
+    font-size: 1.4rem;
+    border-radius: 100rem;
+    border: 1px solid rgba(255, 255, 255, 0.00);
+    background: #D2E5FF;
+    backdrop-filter: blur(11.300000190734863px);
+    font-weight: 500;
+    color: #0054C5;
+    padding: .4em 1.1em;
+    width: fit-content;
+    display: inline-block;
+    @include max(600px){
+        font-size: 1.2rem;
+    }
+}

@@ -40,6 +40,12 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+  functionSlider(".program-slider", {
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "fade",
+  });
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");
   //   if (prodt_silder) {
