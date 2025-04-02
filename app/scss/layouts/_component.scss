@@ -1,11 +1,14 @@
 .c-pri {
   color: var(--color-pri);
 }
-.c-second {
+.c-sec {
   color: var(--color-sec);
 }
 .c-text {
   color: var(--color-text);
+}
+.c-tt {
+  color: var(--color-tt);
 }
 .c-black {
   color: var(--color-black);
@@ -391,8 +394,7 @@
     color: var(--color-text);
     font-size: 1.6rem;
     align-items: center;
-
-    gap: 0.4rem;
+    gap: 1.2rem;
     &-link {
       font-weight: 600;
       text-decoration: underline;
@@ -414,9 +416,14 @@
     }
   }
 
-  input:checked ~ .circle {
-    &::after {
-      background-image: url("../assets/images/radio-fill.svg");
+  input:checked ~ {
+    .txt {
+      color: var(--color-pri);
+    }
+    .circle {
+      &::after {
+        background-image: url("../assets/images/radio-fill.svg");
+      }
     }
   }
 }
@@ -439,14 +446,17 @@
   border-style: dashed;
 }
 .rs {
-  border-radius: 0.8rem;
+  border-radius: var(--rs);
 }
 .rs-top {
-  border-radius: 0.8rem 0.8rem 0 0;
+  border-radius: var(--rs) var(--rs) 0 0;
 }
 .py-b {
   --py: 2.4rem;
   padding-bottom: var(--py);
+  @include max(1024px) {
+    --py: 1.6rem;
+  }
 }
 .py-top-10 {
   padding-top: 1rem;
@@ -454,7 +464,7 @@
 .py {
   --py: 2rem;
   padding: var(--py);
-  @include max(768px) {
+  @include max(1024px) {
     --py: 1.2rem;
   }
   &.py-12 {
@@ -607,34 +617,24 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: fit-content;
-  gap: 0.4rem;
-  padding: 0.4rem;
-  border: 0.1rem solid var(--cl-border);
-  border-radius: 0.4rem;
+  gap: 1.2rem;
   background: var(--color-white);
-  //   &-input {
-  //     height: 2.4rem;
-  //     width: 2.4rem !important;
-  //     text-align: center;
-  //     border: unset;
-  //     outline: unset;
-  //     flex-shrink: 0;
-  //     display: block;
-  //   }
-
-  //   &-number {
-  //     display: none;
-  //   }
-
+  &-number {
+    min-width: 1.6rem;
+    color: #121138;
+    font-weight: 500;
+    text-align: center;
+  }
   &-btn {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: 0.4s;
-    border-radius: 0.4rem;
+    border-radius: 100rem;
+    border: 0.1rem solid #eeeeee;
     i {
       font-size: 1rem;
     }
@@ -710,6 +710,45 @@ input[type="number"] {
       border-radius: 0.8rem;
       background: var(--color-pri);
       color: #fff;
+    }
+  }
+}
+.link-group {
+  display: flex;
+  gap: 1.6rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    height: 0;
+  }
+  .t-links {
+    display: inline-block;
+    padding: 0.8rem;
+    position: relative;
+    @include fz-18;
+    color: var(--color-tt);
+    @include hover {
+      &::before {
+        width: 100%;
+        left: 0;
+      }
+    }
+    &.active {
+      font-weight: 600;
+      &::before {
+        width: 100%;
+        left: 0;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 0.2rem;
+      background: var(--color-pri);
+      transition: 0.3s ease-in-out;
     }
   }
 }

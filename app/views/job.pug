@@ -1,0 +1,68 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-job'
+
+block container
+   +bnp("Job Opportunities")
+   section.sec-job.ss-pd 
+      .container 
+         .job
+            .job-wrap 
+               .job-head.t-center
+                  .mb-20 
+                     +title("	Job Opportunities in Medical Billing & Coding","CAREER POTENTIAL IN THE U.S","center")
+                  P.t-des.c-txt.t20 
+                     | A career in Medical Billing & Coding offers a wide range of opportunities in the U.S. healthcare industry. With the increasing demand for skilled professionals, certified specialists in this field enjoy flexibility, competitive salaries, and the ability to work globally.
+               .job-block 
+                  .job-list.row 
+                     .col.col-6 
+                        .job-it 
+                           .b-bg 
+                              +img("job-bg (1).png")
+                           .b-ctn 
+                              .b-gr
+                                 span.icon 
+                                    +img("jpb-icon (1).svg")
+                                 h3.t-text Remote Work
+                              p.t-des Medical Billing & Coding professionals can work from anywhere, offering flexibility and work-life balance.
+                     .col.col-6 
+                        .job-it 
+                           .b-bg 
+                              +img("job-bg (2).png")
+                           .b-ctn
+                              .b-gr
+                                 span.icon 
+                                    +img("jpb-icon (2).svg")
+                                 h3.t-text Relocation Opportunities
+                              p.t-des Certification opens doors to jobs in hospitals, clinics, and insurance companies across the U.S.
+                     .col.col-6 
+                        .job-it 
+                           .b-bg 
+                              +img("job-bg (3).png")
+                           .b-ctn 
+                              .b-gr
+                                 span.icon 
+                                    +img("jpb-icon (3).svg")
+                                 h3.t-text Freelance Potential
+                              p.t-des Professionals can work independently, offering services to multiple healthcare providers, with growing global demand.
+                     .col.col-6 
+                        .job-it 
+                           .b-bg 
+                              +img("job-bg (4).png")
+                           .b-ctn 
+                              .b-gr
+                                 span.icon 
+                                    +img("jpb-icon (4).svg")
+                                 h3.t-text Higher Earning Potential
+                              p.t-des Certified professionals earn 27% more on average, with salary growth through experience and specialization.
+   .sec-sct.ss-pd-b 
+      .container 
+         .sct
+            .sct-wrap 
+               .b-bg 
+                  +img("sct-bg.jpg")
+               .b-inner 
+                  span.text Start your journey today and take advantage of the many opportunities available in Medical Billing & Coding!
+                  +Btn("Enroll Now","","white")

@@ -1,0 +1,38 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-blog'
+
+block container
+   +bnp("Blog")
+   section.sec-blog.ss-pd 
+      .container 
+         .blog 
+            .blog-wrap 
+               .b-head
+                  .link-group 
+                     a(href="").t-links.active
+                        | All
+                     a(href="").t-links
+                        | Latest blog
+                     a(href="").t-links
+                        | Must read
+                     a(href="").t-links
+                        | Story
+               .blog-panel 
+                  .b-ctn 
+                     .b-bg 
+                        +img("blog-panel.jpg")
+                     .d-flex.d-col.gap16.b-pos
+                        span.b-tag NEWEST
+                        h3.t-text 
+                           a(href="")  How Medical Billing & Coding Helps Improve Healthcare Efficiency
+                        .t-gr
+                           span.c-white.fw-5 2/15/2025
+               .blog-block 
+                  .news-list.row
+                     each i,index in Array(6) 
+                        .col.col-4
+                           +news(index)
+                  +PageNumber()

@@ -15,6 +15,12 @@
   font-weight: 500;
   min-height: var(--iz);
   border-radius: 100rem;
+  &.second {
+    background: var(--color-pri);
+    &::after {
+      background: var(--color-sec);
+    }
+  }
   &.trans {
     background: transparent;
     border: 0.1rem solid var(--color-pri);

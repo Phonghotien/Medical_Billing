@@ -1,0 +1,75 @@
+.form-list {
+  --rg: 1.6rem;
+  --cg: 1.6rem;
+  @include max(1200px) {
+    --cg: 1.2rem;
+  }
+  ~ .b-submit {
+    margin-top: 2.4rem;
+  }
+  .form-ip {
+    position: relative;
+    .text {
+      color: #1f2237;
+      display: inline-block;
+      margin-bottom: 0.8rem;
+      @include fz-16;
+      font-weight: 500;
+    }
+
+    .ip-pos {
+      position: relative;
+      .icon {
+        position: absolute;
+        width: 2.4rem;
+        height: 2.4rem;
+        @include mid-flex;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-text);
+        right: 1.6rem;
+        cursor: pointer;
+      }
+      input {
+        padding-right: 4rem;
+      }
+    }
+    input {
+      height: 4.8rem;
+      width: 100%;
+      border: 0.1rem solid #dedfe0;
+      border-radius: 0.8rem;
+      outline: unset;
+      color: var(--color-text);
+      transition: 0.3s ease-in-out;
+      padding: 0 1.6rem;
+      @include fz-16;
+      background: #f2f3f5;
+      &::placeholder {
+        color: #6b7280;
+      }
+      &:focus {
+        border-color: var(--color-pri);
+      }
+    }
+    textarea {
+      min-height: 10rem;
+      width: 100%;
+      background: #f2f3f5;
+      border: 0.1rem solid #dedfe0;
+      border-radius: 0.4rem;
+      padding: 1.2rem;
+      @include fz-16;
+      outline: unset;
+      color: var(--color-text);
+      transition: 0.3s ease-in-out;
+      resize: unset;
+      &::placeholder {
+        color: #6b7280;
+      }
+      &:focus {
+        border-color: var(--color-pri);
+      }
+    }
+  }
+}
