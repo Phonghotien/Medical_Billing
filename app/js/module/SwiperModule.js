@@ -46,6 +46,17 @@ export default function SwiperModule() {
     loop: false,
     effect: "fade",
   });
+  functionSlider(".slideSw", {
+    speed: 1200,
+    autoplay: {
+      delay: 2600,
+    },
+    slidesPerView: "auto",
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "slide",
+  });
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");
   //   if (prodt_silder) {

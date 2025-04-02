@@ -1,0 +1,150 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-checkout'
+
+block container
+   section.sec-cko.ss-pd 
+      .container 
+         .cko
+            .cko-wrap 
+               .cko-head.mb-32
+                  a(href="").iwt
+                     span.icon.c-pri 
+                        i.fa-light.fa-arrow-left
+                     span.t16.c-pri Back to shopping cart
+                  h2.t40.c-sec.fw-5 Checkout
+               .cko-block 
+                  .cko-row.row 
+                     .col.col-8
+                        .cko-panel 
+                           .py.rs.border.bg-white.d-flex.d-col.gap40
+                              .b-boxed
+                                 .t-head.mb-20
+                                    span.c-tt.t20.fw-6 Contact
+                                 .b-form 
+                                    .form-list.row 
+                                       .col.form-ip 
+                                          span.text Email
+                                          input(type="text" placeholder="Type your email")
+                              .b-boxed
+                                 .t-head.mb-20
+                                    span.c-tt.t20.fw-6 Payment
+                                    p.c-txt.t16 All transactions are secure and encrypted
+                                 .cko-paym
+                                    .b-item.paymItemJs
+                                       .b-head.d-flex.j-bw.a-center
+                                          +Checker("radio","circle","Credit or debit card","","payment")
+                                          .d-flex 
+                                             each i,index in Array(3)
+                                                span.icon.d-flex
+                                                   +img(`paym-icon (${index+1}).svg`)
+                                       .b-panel.panelHide
+                                          .py
+                                             .form-list.row
+                                                .col.form-ip 
+                                                   span.text Card number
+                                                   input(type="text" placeholder="1234 1234 1234")
+                                                .col.col-6.form-ip 
+                                                   span.text Expiration  date
+                                                   input(type="text" placeholder="MM/YY")
+                                                .col.col-6.form-ip 
+                                                   span.text Security code
+                                                   input(type="text" placeholder="CVC")
+                                    .b-item.paymItemJs
+                                       .b-head 
+                                          +Checker("radio","circle","US bank account","","payment")
+                                       .b-panel.panelHide
+                                          .py
+                                             .form-list.row
+                                                .col.col-6.form-ip 
+                                                   span.text Card number
+                                                   input(type="text" placeholder="1234 1234 1234")
+                                                .col.col-6.form-ip 
+                                                   span.text US bank account
+                                                   input(type="text" placeholder="MM/YY")
+                              .b-boxed
+                                 .t-head.mb-20
+                                    span.c-tt.t20.fw-6 Billing address
+                                 .b-form 
+                                    .form-list.row 
+                                       .col.col-6.form-ip 
+                                          span.text Full name
+                                          input(type="text" placeholder="Full name")
+                                       .col.col-6.form-ip 
+                                          span.text Gender 
+                                          select(name="").re-select-main
+                                             option(value="") Choose your gender
+                                             option(value="") ABC
+                                             option(value="") XYZ 
+                                       .col.col-6.form-ip 
+                                          span.text Country 
+                                          select(name="").re-select-main
+                                             option(value="") Choose your country
+                                             option(value="") ABC
+                                             option(value="") XYZ 
+                                       .col.col-6.form-ip 
+                                          span.text City 
+                                          select(name="").re-select-main
+                                             option(value="") Choose your city
+                                             option(value="") ABC
+                                             option(value="") XYZ 
+                                       .col.col-6.form-ip 
+                                          span.text State 
+                                          select(name="").re-select-main
+                                             option(value="") Choose your state
+                                             option(value="") ABC
+                                             option(value="") XYZ 
+                                       .col.col-6.form-ip 
+                                          span.text ZIP Code 
+                                          input(type="text" placeholder="Type your ZIP Code")
+                                       .col.col-6.form-ip 
+                                          span.text Address Line 1
+                                          input(type="text" placeholder="Type your address line")
+                                       .col.col-6.form-ip 
+                                          span.text Address Line 2 
+                                          input(type="text" placeholder="Type your address line")
+                                       .col.form-ip 
+                                          span.text Telephone number
+                                          input(type="text" placeholder="Type your telephone number")
+                     .col.col-4 
+                        .cko-side 
+                           .py.rs.border.bg-white
+                              .d-flex.d-col.gap32
+                                 .b-top
+                                    .t-head.mb-24
+                                       span.c-tt.t20.fw-6 Order information
+                                    .b-cart.d-flex.d-col.py-b.border-bot.mb-24
+                                       each i,index in Array(2)
+                                          .cko-it
+                                             .inner
+                                                .b-info.d-flex.a-center.gap24
+                                                   span.b-img 
+                                                      +img(`cko-it (${index+1}).jpg`)
+                                                   a(href="").t-links
+                                                      | Certified Professional Coder
+                                                .b-price.c-tt.fw-6.t20
+                                                   span.t-num $6,639.94
+                                             .b-bot
+                                                a(href="").a-remove
+                                                   | Remove
+                                                +Count() 
+                                    .b-panel.d-flex.d-col.py-b.border-bot.mb-24
+                                       .d-flex.j-bw.t16
+                                          span.c-txt Sub total (2 items)
+                                          span.c-tt.fw-5 $8,279.89
+                                       .d-flex.j-bw.t16
+                                          span.c-txt Taxes
+                                          span.c-tt.fw-5 Calculated at checkout
+                                    .t-bot 
+                                       .d-flex.j-bw
+                                          span.c-text Estimated total
+                                          span.c-pri.t24.fw-5 $8,279.89
+                                 .b-bot 
+                                    p.t-des.c-text.t16 
+                                       | By proceeding with your purchase, you agree to USA Medical Billing & Coding School's 
+                                       a(href="").c-pri Terms of Service 
+                                       |and 
+                                       a(href="").c-pri Personal Data Processing Policy.
+                                 +Btn("Continue to checkout")
