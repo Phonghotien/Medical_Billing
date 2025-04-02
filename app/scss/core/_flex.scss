@@ -81,6 +81,9 @@
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+  &.not-gap {
+    gap: 0;
+  }
   &.not-wrap {
     flex-wrap: nowrap;
   }
@@ -106,6 +109,12 @@
     gap: 4rem;
     @include max(1200px) {
       gap: 2.4rem;
+    }
+  }
+  &.gap32 {
+    gap: 3.2rem;
+    @include max(1024px) {
+      gap: 1.6rem;
     }
   }
   &.gap24 {

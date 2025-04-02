@@ -7,13 +7,15 @@
   --color-txt: #666666;
   --color-black: #000;
   --color-white: #fff;
-
+  --cl-border: #ddd;
+  --rs: 1.6rem;
   // distance section
   --pd-sc: 6rem;
 
   @media (max-width: 1200px) {
     --pd-sc: 4rem;
     --size-hd: 6rem;
+    --rs: 0.8rem;
   }
 }
 

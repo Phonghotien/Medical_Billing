@@ -38,6 +38,7 @@
     margin: unset !important;
     transition: 0.5s ease-in-out;
     border-radius: 100rem;
+    overflow: hidden;
     @include max(768px) {
       width: 0.8rem;
       height: 0.8rem;

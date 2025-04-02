@@ -1,0 +1,41 @@
+.bnp {
+  &-wrap {
+    padding: 0 1.5rem;
+    position: relative;
+    min-height: calc((400 / 1920) * 100vw);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    @include max(500px) {
+      min-height: 14rem;
+    }
+    .t-text {
+      font-size: 8rem;
+      font-weight: 600;
+      color: var(--color-white);
+      @include max(1200px) {
+        font-size: 4rem;
+      }
+    }
+  }
+  &-bg {
+    position: absolute;
+    @include full;
+    z-index: -1;
+    &::after {
+      content: "";
+      position: absolute;
+      @include full;
+      background: rgba(0, 19, 53, 0.6);
+      z-index: 1;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
