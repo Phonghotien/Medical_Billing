@@ -1,0 +1,27 @@
+extends layout/layout
+
+block vars
+   -title = 'About'
+   -bodyClass = 'page-template'
+
+block container
+   +bnp("About us")
+   section.sec-wel 
+      .wel.ss-pd
+         .container 
+            .t-center.wel-head 
+               .re-tag.mb-24 ABOUT US 
+               h2.t-title 
+                  | Welcome to  
+                  br
+                  | USA Medical Billing & Coding School
+            .wel-row.row 
+               .wel-col.col
+                  h3.wel-title Blended CPC and CPB Curriculm
+                  p.wel-des We have developed a unique Blended CPC and CPB curriculum, meticulously crafted to meet the rigorous standards set by the AAPC. This curriculum serves as a one-stop solution, equipping our graduates with the expertise needed to successfully obtain certifications in both Medical Billing and Coding. By offering this comprehensive program, we streamline the learning process, saving our students time and ensuring they are thoroughly prepared for the challenges of the industry.
+               .wel-col.col 
+                  .wel-img 
+                     +img('wel-img.jpg')
+
+
+

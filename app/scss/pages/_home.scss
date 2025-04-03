@@ -939,6 +939,11 @@
     border-radius: 2.4rem;
     background-color: #E5F0FF;
     overflow: hidden;
+
+    @include max(1024px) {
+        --px: 2.4rem;
+        --py: 2.4rem;
+    }
 }
 
 .regi-dc {
@@ -956,6 +961,20 @@
 
 .regi-col {
     width: calc(100% / 2 - (var(--gap) - (var(--gap) / 2)));
+
+    @include max(767px) {
+        width: 100%;
+    }
+
+    &:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @include max(767px) {
+            display: none;
+        }
+    }
 }
 
 .regi-img {
@@ -973,4 +992,51 @@
     font-weight: 600;
     color: #002868;
     margin-bottom: 4.8rem;
+
+    @include max(500px) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.regi-form .form-list {
+    --rg: 2.4rem;
+    --cg: 4rem;
+
+    @include max(1024px) {
+        --cg: 2.4rem;
+    }
+}
+
+.regi-form .form-list .form-ip input {
+    height: 5.6rem;
+    background-color: white;
+    border-radius: 1.2rem;
+    border: none;
+}
+
+.regi-form .form-list .form-ip {
+    @include max(500px) {
+        width: 100%;
+    }
+}
+
+.regi-form {
+    .select2-container {
+        height: 5.6rem;
+    }
+
+    .select2-container--default .select2-selection--single {
+        height: 5.6rem;
+        background-color: white;
+        border-radius: 1.2rem !important;
+        border: none;
+    }
+}
+
+.regi-control {
+    margin-top: 4.8rem;
+
+    @include max(500px) {
+        margin-top: 2.4rem;
+    }
 }

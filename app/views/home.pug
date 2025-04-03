@@ -259,6 +259,22 @@ block container
                      p.regi-title Register form
                      .regi-form 
                         form(action="")
+                           .form-list.row
+                              .col.form-ip 
+                                 select(name="").re-select-main
+                                    option(value="") Choose your city
+                                    option(value="") ABC
+                                    option(value="") XYZ
+                              .col.col-6.form-ip
+                                 input(type="text" placeholder="First name")
+                              .col.col-6.form-ip
+                                 input(type="text" placeholder="Last name")
+                              .col.form-ip
+                                 input(type="text" placeholder="Email Address") 
+                              .col.form-ip
+                                 input(type="text" placeholder="Phone Number")
+                           .regi-control
+                              +Btn("Send Us","button") 
                   .regi-col
                      .regi-img
                         +img("regi-img.png")

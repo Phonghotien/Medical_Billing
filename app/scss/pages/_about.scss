@@ -1,0 +1,60 @@
+.wel-head {
+    margin-bottom: 7.2rem;
+
+    @include max(600px) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.wel-row {
+    align-items: center;
+}
+
+.wel-col {
+    &:nth-child(1) {
+        width: calc(5/12*100%);
+
+        @include max(1200px) {
+            width: 50%;
+        }
+
+        @include max(1024px) {
+            width: 100%;
+        }
+    }
+
+    &:nth-child(2) {
+        width: calc(7/12*100%);
+
+        @include max(1200px) {
+            width: 50%;
+        }
+
+        @include max(1024px) {
+            width: 100%;
+        }
+    }
+}
+
+.wel-img {
+    border-radius: 1.6rem;
+    aspect-ratio: 794/402;
+
+    img {
+        border-radius: inherit;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.wel-title {
+    font-weight: 600;
+    @include fz-36;
+    color: #002868;
+    margin-bottom: 1.6rem;
+}
+
+.wel-des {
+    color: #494949;
+}
