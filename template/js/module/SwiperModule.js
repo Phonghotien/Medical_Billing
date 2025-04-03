@@ -40,6 +40,12 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+  functionSlider(".program-slider", {
+    initialSlide: 0,
+    centeredSlides: false,
+    loop: false,
+    effect: "fade",
+  });
   functionSlider(".slideSw", {
     speed: 1200,
     autoplay: {
