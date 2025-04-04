@@ -30,24 +30,8 @@
       }
     }
   }
-  &-top {
-    padding: var(--py) 0;
-    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
-    overflow: hidden;
-    @include max(1024px) {
-      order: 2;
-    }
-    .b-row {
-      @include min(769px) {
-        align-items: center;
-      }
-      > .col {
-        @include max(768px) {
-          width: 100%;
-        }
-      }
-    }
-    .iwt {
+  &-ct {
+    &.iwt {
       --iz: 6.4rem;
       --cl: #fff;
       --fw: 500;
@@ -74,6 +58,25 @@
         justify-content: flex-start !important;
       }
     }
+  }
+  &-top {
+    padding: var(--py) 0;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    @include max(1024px) {
+      order: 2;
+    }
+    .b-row {
+      @include min(769px) {
+        align-items: center;
+      }
+      > .col {
+        @include max(768px) {
+          width: 100%;
+        }
+      }
+    }
+
     .col {
       &:last-child {
         position: relative;

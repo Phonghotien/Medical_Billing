@@ -1,0 +1,170 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-coding'
+
+block container
+   section.sec-certi
+      .cir-dcor 
+         +img("cir-dc.svg")
+      .cir-dcor.x2
+         +img("cir-dc.svg")
+      .container 
+         .certi
+            .certi-wrap 
+               .certi-row.row 
+                  .col.col-6
+                     .certi-panel 
+                        .t-head 
+                           span.txt CPC 
+                           h2.t-title Certifield professional Coder & Certified professional Biller 
+                        .b-des 
+                           span.b-tag CERTIFIED PROFESSIONAL CODER 
+                           P.t-des 
+                              | Trained to assign specific codes to medical procedures and diagnoses for insurance and billing purposes within the healthcare industry.
+                  .col.col-6
+                     .certi-img 
+                        .inner 
+                           +img("certi-img.jpg")
+   section.sec-err.is-custom
+      .container 
+         .err
+            .err-wrap 
+               .err-row.row 
+                  .col.col-6
+                     .err-img 
+                        .inner 
+                           +img("com-img.jpg") 
+                  .col.col-6
+                     .err-panel 
+                        .t-head
+                           +title("Commitment")
+                           .t-des.c-txt.t18
+                              p 
+                                 | We’ve partnered with AAPC to offer a top-tier curriculum, designed by certified professionals, ensuring students are prepared for successful careers and certifications.
+                        .b-list
+                           .iwt 
+                              span.icon 
+                                 +img("com-icon (1).svg")
+                              .t-gr
+                                 span.c-text.t18.fw-5 AAPC Partnership
+                                 span.c-txt.t18 We’ve partnered with AAPC, the leading accrediting body for Medical Billing and Coding schools.
+                           .iwt 
+                              span.icon 
+                                 +img("com-icon (2).svg")
+                              .t-gr
+                                 span.c-text.t18.fw-5 Certified Curriculum
+                                 span.c-txt.t18 Our program, designed by MGMA, AHIMA, and AAPC certified professionals, prepares students for a successful career in medical coding and billing.
+                           .iwt 
+                              span.icon 
+                                 +img("com-icon (3).svg")
+                              .t-gr
+                                 span.c-text.t18.fw-5 Strong Network
+                                 span.c-txt.t18 With 350+ partners and over 30 years of experience, we offer one of the strongest educational networks in the industry.
+                           .iwt 
+                              span.icon 
+                                 +img("com-icon (4).svg")
+                              .t-gr
+                                 span.c-text.t18.fw-5 Exam Readiness
+                                 span.c-txt.t18 Upon completing the program, students are fully prepared to challenge the CPB and CPC exams.
+   section.sec-cou.ss-pd 
+      .container 
+         .cou
+            .cou-wrap 
+               .cou-head.t-center.mb-40
+                  +title("Course outline")
+               .cou-block 
+                  .cou-panel.mb-40 
+                     .t-head.c-tt.fw-5.t36.mb-24 Prepare for the AAPC CPC® Certification Exam
+                     .b-row.row 
+                        .col.col-4 
+                           .cou-it
+                              .iwt 
+                                 span.icon 
+                                    +img("cou-icon (1).svg")
+                                 .t-gr 
+                                    span.c-sec.t24.fw-5 Course Duration
+                                    span.c-text.t16 20 weeks (Self-paced or Instructor-led options)
+                        .col.col-4 
+                           .cou-it
+                              .iwt 
+                                 span.icon 
+                                    +img("cou-icon (2).svg")
+                                 .t-gr 
+                                    span.c-sec.t24.fw-5 Format
+                                    span.c-text.t16 100% Online | Includes Video Lectures, Practice Exams, Quizzes & Support
+                        .col.col-4 
+                           .cou-it
+                              .iwt 
+                                 span.icon 
+                                    +img("cou-icon (3).svg")
+                                 .t-gr 
+                                    span.c-sec.t24.fw-5 Prerequisites
+                                    span.c-text.t16 High school diploma or equivalent; basic understanding of anatomy and medical terminology recommended
+                  .cou-mod-panel
+                     .t-head.c-tt.fw-5.t36.mb-24 Course Modules
+                     .b-row.row 
+                        .col.col-8
+                           .cou-mod-list.collapse-block
+                              each i,index in Array(8)
+                                 .cou-mod-it.collapse-item
+                                    .b-head.collapse-head
+                                       span.txt Module #{index+1}: Introduction to Medical Coding
+                                       span.icon
+                                          i.fa-light.fa-chevron-down
+                                    .b-panel.collapse-body
+                                       .content
+                                          ul 
+                                             li 
+                                                | Overview of medical coding systems
+                                             li 
+                                                | Healthcare industry basics
+                                             li 
+                                                | HIPAA and compliance
+                        .col.col-4
+                           .cou-mod-side 
+                              .b-img 
+                                 +img("cou-mod-img.jpg")
+                              .b-panel 
+                                 .c-tt.fw-5.t24.mb-12 What’s Included
+                                 .d-flex.d-col.gap16
+                                    .iwt 
+                                       span.icon 
+                                          +img("coum-icon (1).svg")
+                                       span.c-text 80–100 hours of online instruction
+                                    .iwt 
+                                       span.icon 
+                                          +img("coum-icon (2).svg")
+                                       span.c-text Access to AAPC-aligned curriculum
+                                    .iwt 
+                                       span.icon 
+                                          +img("coum-icon (3).svg")
+                                       span.c-text Practice quizzes and final exam
+                                    .iwt 
+                                       span.icon 
+                                          +img("coum-icon (4).svg")
+                                       span.c-text Instructor support
+                                    .iwt 
+                                       span.icon 
+                                          +img("coum-icon (5).svg")
+                                       span.c-text Certificate of Completion
+                              .b-panel 
+                                 .c-tt.fw-5.t24.mb-12 Why Enroll with Us?
+                                 .d-flex.d-col.gap16
+                                    .iwt 
+                                       span.icon 
+                                          +img("check-icon.svg")
+                                       span.c-text  Taught by AAPC certified instructors with industry experience
+                                    .iwt 
+                                       span.icon 
+                                          +img("check-icon.svg")
+                                       span.c-text Flexible learning: self-paced or instructor-guided
+                                    .iwt 
+                                       span.icon 
+                                          +img("check-icon.svg")
+                                       span.c-text Interactive lessons and real-world examples
+                                    .iwt 
+                                       span.icon 
+                                          +img("check-icon.svg")
+                                       span.c-text Job readiness support after certification
