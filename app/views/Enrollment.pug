@@ -1,0 +1,236 @@
+extends layout/layout
+
+block vars
+    -title = ''
+    -bodyClass = 'page-enrollment'
+
+block container
+   +bnp("Enrollment")
+   section.sec-eri.ss-pd
+      .container 
+         .eri
+            .eri-wrap 
+               .eri-head.mb-40
+                  +title("Who Should Enroll?","Enrollment")
+                  .t-des 
+                     p 
+                        | Explore how this program supports your goals - whether you're aiming for growth, a career change, or flexible work opportunities.
+               .eri-block 
+                  .eri-slider.slideSw
+                     .b-sw 
+                        +Swiper()
+                           each i,index in Array(3)
+                              .swiper-slide.col.col-4 
+                                 .eri-it 
+                                    .b-img 
+                                       a(href="").inner
+                                          +img(`eri-img (${index+1}).jpg`)
+                                    .b-ctn 
+                                       h3.t-text 
+                                          a(href="") Aspiring Professionals
+                                       p.t-des Individuals seeking high-demand, stable career opportunities with potential for growth
+                     +pagination()
+   section.sec-err
+      .cir-dcor 
+         +img("cir-dc.svg")
+      .cir-dcor.x2
+         +img("cir-dc.svg")
+      .container 
+         .err
+            .err-wrap 
+               .err-row.row 
+                  .col.col-6
+                     .err-img 
+                        .inner 
+                           +img("err-img.jpg") 
+                  .col.col-6
+                     .err-panel 
+                        +title("Add mission Requirments","REQUIREMENTS","white")
+                        .b-list
+                           .iwt 
+                              span.icon 
+                                 +img("err-icon (1).svg")
+                              span.txt.t18.c-white.fw-5 Minimum Age 16 or older
+                           .iwt 
+                              span.icon 
+                                 +img("err-icon (2).svg")
+                              span.txt.t18.c-white.fw-5 High School Diploma or Equivalent
+                           .iwt 
+                              span.icon 
+                                 +img("err-icon (3).svg")
+                              span.txt.t18.c-white.fw-5 Proof of Identification (Valid ID, Passport, etc.)
+                           .iwt 
+                              span.icon 
+                                 +img("err-icon (4).svg")
+                              span.txt.t18.c-white.fw-5 Agent Referral Code
+   section.sec-ers.ss-pd 
+      .container 
+         .ers 
+            .ers-wrap 
+               .ers-head 
+                  .mb-20
+                     +title("Steps & Register form","REDISTES NOW","center")
+                  p.t-des.t20.c-text.t-center
+                     | Steps to register for the courses on our website are below:
+               .ers-block 
+                  .ers-list 
+                     .ers-it 
+                        .col-info
+                           span.t-num 01
+                           span.icon 
+                              +img("ers-icon (1).svg")
+                           .b-ctn 
+                              span.c-pri.fw-7.t20 STEP 1
+                              .des 
+                                 ul 
+                                    li 
+                                       | Student/ Agent submits Admission Agreement. 
+                                    li 
+                                       | Students have to submit the required documents (Country ID, Passport, ...) in this agreement.
+                                    li 
+                                       | Agent makes sure the agent code is included in this step (if have)
+                        .col-img 
+                           .b-img 
+                              .inner 
+                                 +img("ers-img (1).jpg")
+                     .ers-it 
+                        .col-info
+                           span.t-num 02
+                           span.icon 
+                              +img("ers-icon (2).svg")
+                           .b-ctn 
+                              span.c-pri.fw-7.t20 STEP 2
+                              .des 
+                                 span Students will receive Admission decision:
+                                 ul 
+                                    li 
+                                       | Receive Acceptance Letter. Go to Step 3. or
+                                    li 
+                                       | Receive Denial Letter with explanation. Stop here and contact us at 
+                                       br
+                                       a(href="").c-pri info@usamedicalcodingschool.com 
+                                       | for help.
+                        .col-img 
+                           .b-img 
+                              .inner 
+                                 +img("ers-img (2).jpg")
+                     .ers-it 
+                        .col-info
+                           span.t-num 03
+                           span.icon 
+                              +img("ers-icon (3).svg")
+                           .b-ctn 
+                              span.c-pri.fw-7.t20 STEP 3
+                              .des 
+                                 p Students make payment for tuition fees and other fees as listed on the Enrollment Agreement. You can choose payment options as below:
+                                 ul 
+                                    li 
+                                       | Pay in full in one payment with a $500 discount will be applied.
+                                    li 
+                                       | Pay monthly with deposit: $2,279.89 when register and monthly payments of $1,500 for 4 months when students start the course. (Monthly payments are due by the 5th of the month and a $50 late fee is applied to each late payment). 
+                                 p The school sends a receipt to students after the school received the payment.
+                        .col-img 
+                           .b-img 
+                              .inner 
+                                 +img("ers-img (3).jpg")
+                     .ers-it 
+                        .col-info
+                           span.t-num 04
+                           span.icon 
+                              +img("ers-icon (4).svg")
+                           .b-ctn 
+                              span.c-pri.fw-7.t20 STEP 4
+                              .des 
+                                 span Students will receive Admission decision:
+                                 ul 
+                                    li 
+                                       | Students will prepare to attend orientation day to start the class.
+                                    li 
+                                       | Receive the announcement with the login password
+                                    li 
+                                       | Participate in the online orientation and training and check the required technology
+                        .col-img 
+                           .b-img 
+                              .inner 
+                                 +img("ers-img (4).jpg")
+   section.sec-era.ss-pd-b 
+      .container 
+         .era
+            .era-wrap 
+               .era-head 
+                  .mb-24 
+                     +title("Addmission Agreement","","t-center")
+                  .t-des.t20.t-center
+                     p 
+                        |  Contact the Admissions Office at 470-399 0965 or 
+                        a(href="").c-pri info@usamedicalcodingschool.com 
+                        |  or go to UMCS Online Support if you have any questions or technical difficulties.
+               .era-block 
+                  .era-panel 
+                     form(action="") 
+                        .era-row.row 
+                           .col.col-6
+                              .era-box 
+                                 .t-head  Student Information
+                                 .b-form 
+                                    .form-list.row 
+                                       .col.col-6.form-ip 
+                                          span.text Full name
+                                          input(type="text" placeholder="Type your full name")
+                                       .col.col-6.form-ip 
+                                          span.text Gender
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your gender
+                                       .col.form-ip 
+                                          span.text D.O.B
+                                          input(type="date")
+                                       .col.col-6.form-ip 
+                                          span.text Agent Name (if applicable)
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your country
+                                       .col.col-6.form-ip 
+                                          span.text Agent Code (if applicable)
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your city
+                                       .col.col-6.form-ip 
+                                          span.text Country
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your country
+                                       .col.col-6.form-ip 
+                                          span.text City
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your city
+                                       .col.col-6.form-ip 
+                                          span.text State
+                                          select(name="").re-select-main
+                                             option(value="")  Choose your state
+                                       .col.col-6.form-ip 
+                                          span.text ZIP Code
+                                          input(type="text" placeholder="Type your ZIP Code")
+                                       .col.col-6.form-ip 
+                                          span.text Address Line 1
+                                          input(type="text" placeholder="Type your address line")
+                                       .col.col-6.form-ip 
+                                          span.text Address Line 2
+                                          input(type="text" placeholder="Type your address line")
+                                       .col.col-6.form-ip 
+                                          span.text Telephone number
+                                          input(type="text" placeholder="Type your telephone number")
+                                       .col.col-6.form-ip 
+                                          span.text Email
+                                          input(type="text" placeholder="Type your email")
+                           .col.col-6
+                              .era-box 
+                                 .t-head  PROGRAM, CLOCK HOURS, AND SCHEDULE
+                                 .b-form 
+                                    .form-list.row 
+                                       .col.form-ip 
+                                          span.text Program
+                                          select(name="").re-select-main
+                                             option(value="")  Certified Professional Biller & Certified Professional Coding
+                                       .col.form-ip 
+                                          span.text Start Date
+                                          input(type="date")
+                                    .b-submit.mb-24
+                                       +Btn("Submit")
+                                    span.c-text.t18 By submitting this form, you are also agreeing to receive marketing communications in the form of text, email and phone call.
