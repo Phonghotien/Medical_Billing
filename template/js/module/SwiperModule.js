@@ -57,6 +57,32 @@ export default function SwiperModule() {
     loop: false,
     effect: "slide",
   });
+  const hser_sw = new Swiper(".beneSlider .swiper", {
+    slidesPerView: 3,
+    speed: 1200,
+    slidesPerColumn: 2,
+    pagination: {
+      el: ".beneSlider .swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
+
+    breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+      },
+      550: {
+        slidesPerView: 2,
+      },
+      950: {
+        slidesPerView: 3,
+        grid: {
+          rows: 2,
+          fill: "row",
+        },
+      },
+    },
+  });
 
   //   const prodt_silder = document.querySelectorAll(".prdsSlider");
   //   if (prodt_silder) {

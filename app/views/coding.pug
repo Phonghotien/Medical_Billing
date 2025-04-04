@@ -38,6 +38,25 @@ block container
                                     p.program-name Master Medical Terminology
                                     p.program-des Learn medical terminology: prefixes, suffixes, roots, combining forms. Interpret medical reports accuratelya
                +SwiperControl()
+   section.sec-bene.ss-pd-b
+      .container 
+         .bene 
+            .bene-wrap 
+               .bene-head 
+                  h3.txt BENEFITS OF THE COURSE
+               .bene-panel 
+                  .bene-slider.beneSlider 
+                     .swiper-container
+                        .swiper.rows
+                           .swiper-wrapper 
+                              each i,index in Array(6)
+                                 .swiper-slide.col.col-4
+                                    .cou-it
+                                       .iwt 
+                                          span.icon 
+                                             +img(`bene-icon (${index+1}).svg`)
+                                          span.c-sec.t24.fw-5 Take one course - Receive two certifications
+                     +pagination()
    section.sec-certi
       .cir-dcor 
          +img("cir-dc.svg")

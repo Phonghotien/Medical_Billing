@@ -366,6 +366,7 @@
       @include max(1200px) {
         flex-direction: column;
         text-align: center;
+        --gap: 1.2rem;
       }
     }
   }
@@ -564,6 +565,46 @@
           font-size: 1.4rem;
         }
       }
+    }
+  }
+}
+.bene {
+  &-head {
+    @include fz-28;
+    font-weight: 600;
+    color: #757575;
+    text-align: center;
+    margin-bottom: 4.8rem;
+    @include max(1200px) {
+      margin-bottom: 2.4rem;
+    }
+  }
+  &-slider {
+    .swiper {
+      &-wrapper {
+        margin-bottom: -3.2rem;
+
+        @include max(1200px) {
+          margin-bottom: -1.2rem;
+        }
+      }
+      &-slide {
+        margin-top: 0 !important;
+        margin-bottom: 3.2rem !important;
+        @include max(1200px) {
+          margin-bottom: 1.2rem !important;
+        }
+      }
+    }
+  }
+  .cou-it {
+    min-height: 20rem;
+    padding: 2.4rem 4.8rem;
+    @include max(1200px) {
+      padding: 1.2rem;
+    }
+    @include max(500px) {
+      min-height: 15rem;
     }
   }
 }
