@@ -197,16 +197,20 @@
 }
 
 .program-head {
+    margin-bottom: 4.8rem;
+
+    @include max(767px) {
+        margin-bottom: 2.4rem;
+    }
+}
+
+.program-head:not(.t-center) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 2.4rem;
-    margin-bottom: 7.2rem;
 
-    @include max(767px) {
-        margin-bottom: 2.4rem;
-    }
 
     .left {
         display: flex;
@@ -1038,5 +1042,89 @@
 
     @include max(500px) {
         margin-top: 2.4rem;
+    }
+}
+
+.sec-blog-home {
+    .container {
+        max-width: 173.6rem;
+    }
+}
+
+.code-bner {
+    background-color: #E5F0FF;
+}
+
+.code-bner-col {
+    &:nth-child(1) {
+        width: calc(7/12*100%);
+    }
+
+    &:nth-child(2) {
+        width: calc(5/12*100%);
+    }
+
+    @include max(767px) {
+        width: 100% !important;
+    }
+}
+
+.code-bner-img {
+    aspect-ratio: 577/416;
+    border-radius: 1.6rem;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+    }
+}
+
+.code-bner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 76.3rem;
+    max-width: 100%;
+
+    @include max($res-mobile) {
+        font-size: 1vw;
+    }
+
+    @include max(900px) {
+        font-size: 1.2vw;
+    }
+
+    @include max(767px) {
+        font-size: 1.2rem;
+    }
+}
+
+.code-bner-title {
+    font-size: 3.5em;
+    font-weight: 600;
+
+    @include max(500px) {
+        font-size: 2.5em;
+    }
+}
+
+.code-bner-des {
+    font-size: 1.25em;
+    color: #666;
+}
+
+.code-bner-control {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    >img {
+        width: 5em;
+
+        @include max($res-mobile) {
+            width: 4em;
+        }
     }
 }

@@ -130,6 +130,17 @@
     }
 }
 
+.our {
+    position: relative;
+
+    &::before {
+        @include pseudo;
+        @include full;
+        z-index: -4;
+        background-color: white;
+    }
+}
+
 .our-wrapper {
     padding: 7.2rem;
     border-radius: 1.6rem;
@@ -145,7 +156,16 @@
         @include pseudo;
         @include full;
         z-index: -1;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.56) 0%, rgba(0, 0, 0, 0.56) 100%), linear-gradient(0deg, rgba(0, 59, 151, 0.72) 0%, rgba(0, 59, 151, 0.72) 100%);
+        background: #003B97;
+        opacity: .7;
+    }
+
+    &::after {
+        @include pseudo;
+        @include full;
+        z-index: -1;
+        background: #000;
+        opacity: .5;
     }
 
     >img {
@@ -198,5 +218,14 @@
 
     @include max(1200px) {
         gap: 2.4rem;
+    }
+}
+
+.benefit {
+    &::before {
+        @include pseudo;
+        @include full;
+        z-index: -4;
+        background-color: white;
     }
 }

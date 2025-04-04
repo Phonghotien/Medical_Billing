@@ -15,31 +15,38 @@
   font-weight: 500;
   min-height: var(--iz);
   border-radius: 100rem;
+
   &.second {
     background: var(--color-pri);
+
     &::after {
       background: var(--color-sec);
     }
   }
+
   &.trans {
     background: transparent;
     border: 0.1rem solid var(--color-pri);
     color: var(--color-pri);
   }
+
   &.white {
     background: var(--color-white);
     color: #151515;
   }
+
   @include max(1200px) {
     --iz: 4.2rem;
     font-size: 1.4rem;
     padding-left: 1.6rem;
     gap: 0.8rem;
   }
-  > * {
+
+  >* {
     position: relative;
     z-index: 2;
   }
+
   .icon {
     width: var(--iz);
     height: var(--iz);
@@ -51,7 +58,8 @@
     border-radius: inherit;
     color: var(--color-white);
   }
-  &::after {
+
+  &::before {
     position: absolute;
     content: "";
     width: 0;
@@ -62,9 +70,11 @@
     transition: all 0.5s ease;
     z-index: 1;
   }
+
   @include hover {
     color: var(--color-white);
-    &::after {
+
+    &::before {
       width: 100%;
     }
   }

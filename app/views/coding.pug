@@ -5,6 +5,39 @@ block vars
     -bodyClass = 'page-coding'
 
 block container
+   section.sec-code-bner 
+      .code-bner.ss-pd
+         .container 
+            .code-bner-row.row 
+               .code-bner-col.col
+                  .code-bner-content 
+                     div
+                        .re-tag.mb-10 PROGRAM
+                        h1.code-bner-title Medical Billing & Coding
+                     p.code-bner-des Medical Billing and Coding is the process of ensuring healthcare providers are properly reimbursed for the healthcare services which they provided. This includes codifying the medical record into universal medical alphanumeric characters (International Classification of Diseases Vol 10 {ICD-10} and Current Procedural Terminology Vol 4 {CPT-4} codes).
+                     .code-bner-control
+                        +Btn("Send Us")
+                        +img("bner-logo.png")
+               .code-bner-col.col
+                  .code-bner-img 
+                     +img("code-bner-1.jpg")
+   section.sec-program
+      .program.ss-pd
+         .container
+            .program-head.t-center
+               h2.t-title Introduction
+            .program-slider 
+               .swiper-container 
+                  .swiper
+                     .swiper-wrapper
+                        each _, index in Array.from({ length: 3 })
+                           .swiper-slide 
+                              .program-box 
+                                 +img("program-img.jpg")
+                                 .program-content 
+                                    p.program-name Master Medical Terminology
+                                    p.program-des Learn medical terminology: prefixes, suffixes, roots, combining forms. Interpret medical reports accuratelya
+               +SwiperControl()
    section.sec-certi
       .cir-dcor 
          +img("cir-dc.svg")

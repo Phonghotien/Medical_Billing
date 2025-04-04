@@ -14,6 +14,7 @@ import CollapseModule from "./module/CollapseModule.js";
 import ScrollTriggerModule from "./module/ScrollTriggerModule.js";
 import ComponentModule from "./module/ComponentModule.js";
 import DatePickerModule from "./module/DatePickerModule.js";
+import PlusMinusModule from "./module/PlusMinusModule.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   ScrollTriggerModule();
@@ -32,4 +33,5 @@ window.addEventListener("DOMContentLoaded", () => {
   SideModule();
   CollapseModule();
   ComponentModule();
+  PlusMinusModule();
 });

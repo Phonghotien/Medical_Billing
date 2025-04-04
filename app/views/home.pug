@@ -213,6 +213,20 @@ block container
                               +img("ic-call.svg")
                         .inner 
                            +img("call-img.png")
+   section.sec-blog-rl.ss-pd.sec-blog-home
+      .container 
+         .blog-rl
+            .blog-rl-head.mb-32.t-center
+               .re-tag.mb-24 BLOGS
+               +title("Explore the World of Medical Billing & Coding.")
+            .blog-rl-block 
+               .blog-rl-slider.slideSw
+                  .b-sw.posi-rl
+                     +Swiper()
+                        each i,index in Array(4)
+                           .swiper-slide.col.col-4 
+                              +news(index)
+                  +pagination()
    section.sec-regi 
       .regi.ss-pd
          .regi-dc 
